@@ -1,0 +1,47 @@
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(37, 75, 97, 0.733);
+  }
+ 
+  .titulo{
+    color: whitesmoke;
+  }
+
+  .BtnMenu{
+    background-color: rgba(57, 85, 117, 0.267);
+    color: whitesmoke !important;
+    
+  }
+  
+    .menuDesplegable {
+       background-color: rgba(37, 75, 97, 0.733);
+      padding: 0px 20px 10px 0px  !important;
+      margin-top: 19px;
+      
+      width: 160px !important;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  .menuLinks {
+    background-color: transparent;
+    border: transparent;
+    color: white !important;
+    font-size:18px !important;
+    padding-left: 36px !important;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+
+  /* cambio que viene por defecto */
+  
+
+.MuiButton-label{
+  display: block !important;
+}
+
+  
