@@ -1,10 +1,9 @@
 import React from 'react';
-import { Button, Toolbar} from "@material-ui/core";
-import Grow from '@material-ui/core/Grow';
-import Popper from '@material-ui/core/Popper';
-import { IconButton} from "@material-ui/core";
+import { IconButton, Popper, Grow, Button, Toolbar} from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
+import CardWidgets from '../CardWidgets/cardWidgets';
 import './cssNavBar/NavBar.css'
+
 
 function NavBar() {
 
@@ -21,7 +20,7 @@ function NavBar() {
    
       <>
         <Toolbar className="navbar" >
-          <div >
+          
           <IconButton
                         className="BtnMenu"
                         ref={anchorRef}
@@ -51,12 +50,13 @@ function NavBar() {
             </Grow>
           )}
         </Popper>
-          </div>
-          <div>
-           
+          
+               <div>
                  <h1 className="titulo">Amo Pintar</h1>
-           
-            </div>
+              </div>
+              <div>
+                <CardWidgets/>
+              </div>
           
         </Toolbar>
       </>
