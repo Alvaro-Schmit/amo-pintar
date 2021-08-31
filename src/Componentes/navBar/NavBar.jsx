@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconButton, Popper, Grow, Button, Toolbar} from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
-import CardWidgets from '../CardWidgets/cardWidgets';
+import CardWidgets from '../CardWidgets/CardWidgets';
 import './cssNavBar/NavBar.css'
 
 
