@@ -39,11 +39,11 @@ function NavBar() {
                   <div className="menuDesplegable "
                        autoFocusItem={open} >
                        
-                            <Button className='menuLinks' >Todo</Button>
+                            <Button className='menuLinks' key='01'>Todo</Button>
                        
-                            <Button className='menuLinks'>Naturaleza</Button>
+                            <Button className='menuLinks'key='02'>Naturaleza</Button>
                       
-                            <Button className='menuLinks'>Personas</Button>
+                            <Button className='menuLinks'key='03'>Personas</Button>
                     
                   </div>
                 </div>
