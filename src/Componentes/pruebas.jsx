@@ -19,6 +19,11 @@ getFech
 .then(respuesta=> {
     setData(respuesta)})
 
+    useEffect(() => {
+        getFech
+        .then((resp)=> console.log(resp) )     //guardar en el estado
+    }, [])
+
     return (
         
         <div>
