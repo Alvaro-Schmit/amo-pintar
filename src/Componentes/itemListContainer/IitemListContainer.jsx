@@ -18,12 +18,15 @@ const promise = new Promise((resolve, reject)=>{
 function ItemListContainer () {
     
     const [data, setData] = useState([])
+    const [loading, setloading] = useState(true)
 
 
     useEffect(() => {
       promise
-        .then(resp => setData(resp))
+        .then(resp => setData(resp)
+        )
         .catch(err => console.log(err))
+        .finally(()=>setloading(false))
         
    }, )
 
@@ -33,7 +36,11 @@ function ItemListContainer () {
     return(
   
         <div >
+            {loading ? 
+                    <h2>Cargando Productos...</h2>
+                :
             <ItemList  data={data}  greting="Bien Venido"/>
+            }
         </div>
     
     );
