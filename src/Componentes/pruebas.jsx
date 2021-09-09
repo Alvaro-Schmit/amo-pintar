@@ -11,21 +11,21 @@ const valor=200
     
 })
 
-function pruebas() {
+function Pruebas() {
 
-// const [data, setData] = useState([])
+const [items, setData] = useState([])
    
-// getFech
-// .then(respuesta=> {
-//     setData(respuesta)})
+getFech
+.then(respuesta=> {
+    setData(respuesta)})
 
     return (
         
         <div>
-            {data.map(item =><h1>{item.name}</h1>)}
+            {items.map(item =><h1>{item.name}</h1>)}
             
         </div>
     )
 }
 
-export default pruebas
+export default Pruebas
