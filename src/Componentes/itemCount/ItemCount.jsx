@@ -18,7 +18,7 @@ const handleCount= (value)=> {
                         disabled={count ===initial? true : false}
                         onClick={()=> handleCount(-1)}>-</button>
                             
-           <p>{count}</p> 
+            {count}
             
                 <button className="button"
                         disabled={count ===stock? true : false}
