@@ -7,7 +7,7 @@ import Loader from '../loader/Loader'
 
 const filterDataItem = dataItems.filter(filt => filt.name === 'Floki')
 
-const promise = new Promise((resolve, reject)=>{
+const getItem = new Promise((resolve, reject)=>{
     const status = 200
     if(status===200){
         setTimeout(() => {
@@ -25,7 +25,7 @@ function ItemDetailContainer () {
     console.log(data.name);
 
     useEffect(() => {
-      promise
+      getItem
         .then(resp => setData(resp)
         )
         .catch(err => console.log(err))
