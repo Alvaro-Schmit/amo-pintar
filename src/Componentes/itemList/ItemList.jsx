@@ -9,6 +9,8 @@ function ItemList({data, greting}) {
             <div className="cardContainer">
                  
                 {data.map(dat => <Item key={dat.id} dataItem={dat} />)}  
+
+                
             </div>
         </div>
     )

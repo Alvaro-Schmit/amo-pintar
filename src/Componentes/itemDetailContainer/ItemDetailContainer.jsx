@@ -1,25 +1,28 @@
 import {useState, useEffect} from 'react';
-import ItemList from '../itemList/ItemList';
-import "./itemListContainer.css"
+import ItemDetail from '../itemDetail/ItemDetail';
+import "./itemDetailContainer.css"
 import dataItems from '../dataItems/DataItems'
 import Loader from '../loader/Loader'
+
+
+const filterDataItem = dataItems.filter(filt => filt.name === 'Floki')
 
 const promise = new Promise((resolve, reject)=>{
     const status = 200
     if(status===200){
         setTimeout(() => {
-            resolve(dataItems)
+            resolve(filterDataItem)
         }, 2000);
     }else{
           reject(console.log("Algo salio mal al cargar los datos"))
     }
 })
 
-function ItemListContainer () {
+function ItemDetailContainer () {
     
     const [data, setData] = useState([])
     const [loading, setloading] = useState(true)
-
+    console.log(data.name);
 
     useEffect(() => {
       promise
@@ -41,13 +44,17 @@ function ItemListContainer () {
                         <Loader/>
                     </div>
                 :
-            <ItemList  data={data}  greting="Bien Venido"/>
+                <div>
+            <ItemDetail  data={data} />
+            
+            </div>
             }
         </div>
     
     );
   };
+
   
-  export default ItemListContainer;
+  export default ItemDetailContainer;
 
 
