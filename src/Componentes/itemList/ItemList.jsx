@@ -4,9 +4,9 @@ import './itemList.css'
 
 function ItemList({data, greting}) {
     return (
-        <div className="bigcardContainer">  
+        <div className="bigcardContainerList">  
                 <h1>{greting}</h1>
-            <div className="cardContainer">
+            <div className="cardContainerList">
                  
                 {data.map(dat => <Item key={dat.id} dataItem={dat} />)}  
 

@@ -8,14 +8,14 @@ function Item({dataItem}) {
    
     return (
         <>
-            <div className='cards' >
-                <div className='cardCss' >
+            <div className='cardsList' >
+                <div className='cardCssList' >
                     <h2>{dataItem.name}</h2>
                     <img src={dataItem.image} alt={dataItem.name} className={dataItem.className} />
                     <p>{dataItem.description}</p>
-                        <div className="footerCards">
+                        <div className="footerCardsList">
                             <h4>{dataItem.price}</h4>
-                            <Button className="button"
+                            <Button className="buttonList"
                             variant="contained"
                         
                                             >Detalle</Button>
