@@ -47,7 +47,7 @@ const dataItems =[
     },
     {
         id: 'aaac',
-        name: 'Tercero producto',
+        name: 'Puente Calmo',
         smalldescription: 'Breve refencia o Subtitulo',
         image: Puente,
         description: 'descripcion del producton que tenga 3 renglones aproximadamente',
@@ -63,7 +63,7 @@ const dataItems =[
     },
     {
         id: 'aaaf',
-        name: 'Cuarto producto',
+        name: 'Chita',
         smalldescription: 'Breve refencia o Subtitulo',
         image: Chita,
         description: 'descripcion del producton que tenga 3 renglones aproximadamente',
@@ -79,7 +79,7 @@ const dataItems =[
     },
     {
         id: 'aaae',
-        name: 'Quinto producto',
+        name: 'Elefantes',
         smalldescription: 'Breve refencia o Subtitulo',
         image: Elefantes,
         description: 'descripcion del producton que tenga 3 renglones aproximadamente',
@@ -95,7 +95,7 @@ const dataItems =[
     },
     {
         id: 'aaad',
-        name: 'Sexto producto',
+        name: 'Ragnar',
         smalldescription: 'Breve refencia o Subtitulo',
         image: Ragnar,
         description: 'descripcion del producton que tenga 3 renglones aproximadamente',
@@ -112,7 +112,7 @@ const dataItems =[
     },
     {
         id: 'aaag',
-        name: 'Septimo producto',
+        name: 'Jimmy',
         smalldescription: 'Breve refencia o Subtitulo',
         image: Jimy,
         description: 'descripcion del producton que tenga 3 renglones aproximadamente',
@@ -128,7 +128,7 @@ const dataItems =[
     },
     { 
         id: 'aaah',
-        name: 'Octavo producto',
+        name: 'Bjorg',
         smalldescription: 'Breve refencia o Subtitulo',
         image: Bjorg,
         description: 'descripcion del producton que tenga 3 renglones aproximadamente',
@@ -144,7 +144,7 @@ const dataItems =[
     },
     {
         id: 'aaai',
-        name: 'Noveno producto',
+        name: 'Floky B y N',
         smalldescription: 'Breve refencia o Subtitulo',
         image: ByNFloky,
         description: 'descripcion del producton que tenga 3 renglones aproximadamente',
