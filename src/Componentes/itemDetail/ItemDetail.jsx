@@ -1,10 +1,10 @@
-import { Button } from '@material-ui/core'
+import ItemCount from '../itemCount/ItemCount'
 import './obrasDetail.css'
 import './itemDetail.css'
 
-// const onAdd =(count)=>{
-//     alert(`Agregaste ${count} produtos al carrito`)
-//   }
+const onAdd =(count)=>{
+    alert(`Agregaste ${count} produto al carrito`)
+  }
 
 
 
@@ -28,8 +28,9 @@ function ItemDetail({data, greting}) {
                         </div>
                         <div className="footerCards">
                             <h4>{dat.price}</h4>
-                            <Button className="button"
-                                    variant="contained"  >Comprar</Button>
+                            <ItemCount onAdd={onAdd} stock={1} initial={1} />
+                            {/* <Button className="button"
+                                    variant="contained"  >Comprar</Button> */}
                          </div>
                     </div>
                     <div className='container333'>

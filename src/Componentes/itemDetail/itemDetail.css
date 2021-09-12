@@ -92,13 +92,13 @@ h2{
   width: 80%;
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .button {
-  width: 100px;
-  height: 42px;
+  width: 70px;
+  height: 35px;
   margin-top: 2% !important;
 }
 
@@ -107,7 +107,7 @@ h2{
   margin:10px 30px 10px 30px ;
 }
 h4{
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 560px){
@@ -151,7 +151,7 @@ margin-top: 50px;
 }
 
 
-@media only screen and (min-width: 561px) and (max-width: 860px){
+@media only screen and (min-width: 561px) and (max-width: 900px){
 
 .textObra{
   font-size: 14px;

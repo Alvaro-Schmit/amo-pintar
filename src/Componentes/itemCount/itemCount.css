@@ -1,17 +1,17 @@
 .counterContainer{
-  width:220px; 
+  width:200px; 
   /* dentro de la card va a tener un valor en % 75 */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center; 
   font-family: 'Times New Roman', Times, serif;
   color: white; 
   }
 
   .counter{
-    width: 36%;
+    width: 40%;
     border: darkolivegreen solid 1px;
     border-radius: 4px;
     display: flex;
@@ -23,7 +23,7 @@
 
   
 .button{
-    width: 25%;
+    width: 30%;
     box-sizing: border-box;
     border: none;
     font-weight: bolder ;
@@ -44,3 +44,15 @@
   p{
     color: black;
   }
+
+
+  
+@media only screen and (min-width: 520px) and (max-width: 680px){
+  .buttonAgregar{
+    margin-right: 30px !important;
+  }
+  .counter{
+    width: 26%;
+  }
+
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { Button } from '@material-ui/core'
 import  './itemCount.css'
 
 function ItemCount({stock, initial, onAdd}) {
@@ -25,9 +26,10 @@ const handleCount= (value)=> {
                         onClick={()=> handleCount(+1)}>+</button>
 
             </div>
-                <button className="buttonAgregar" 
+                <Button className="buttonAgregar" 
+                        variant="contained"
                         disabled={stock === 0 ? true : false}
-                        onClick={()=>onAdd(count)}>Agregar al carrito</button>
+                        onClick={()=>onAdd(count)}>Comprar</Button>
         </div>
     )
 }
