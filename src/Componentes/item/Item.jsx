@@ -10,11 +10,11 @@ function Item({dataItem}) {
         <>
             <div className='cardsList' >
                 <div className='cardCssList' >
-                    <h2>{dataItem.name}</h2>
+                    <h2 className='tiuloCard'>{dataItem.name}</h2>
                     <img src={dataItem.image} alt={dataItem.name} className={dataItem.className} />
                     <p>{dataItem.description}</p>
                         <div className="footerCardsList">
-                            <h4>{dataItem.price}</h4>
+                            <h4>{dataItem.size}</h4>
                             <Button className="buttonList"
                             variant="contained"
                         
