@@ -3,6 +3,7 @@ import ItemList from '../itemList/ItemList';
 import "./itemListContainer.css"
 import dataItems from '../dataItems/DataItems'
 import Loader from '../loader/Loader'
+import { useParams } from 'react-router';
 
 const promise = new Promise((resolve, reject)=>{
     const status = 200
@@ -19,16 +20,26 @@ function ItemListContainer () {
     
     const [data, setData] = useState([])
     const [loading, setloading] = useState(true)
+    const {categoryId}= useParams()
 
 
     useEffect(() => {
-      promise
-        .then(resp => setData(resp)
-        )
+        if (categoryId === undefined) {
+     
+        promise
+        .then(resp => setData(resp))
         .catch(err => console.log(err))
         .finally(()=>setloading(false))
+        }
+        else{
+            promise
+            .then(resp => setData(resp.filter(it=> it.category===categoryId)))
+            .catch(err => console.log(err))
+            
+        }
+
         
-   }, )
+   }, [categoryId])
 
 
 

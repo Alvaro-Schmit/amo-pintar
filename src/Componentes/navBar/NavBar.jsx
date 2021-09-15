@@ -3,9 +3,10 @@ import { IconButton, Popper, Grow, Button, Toolbar} from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
 import CardWidgets from '../CardWidgets/CardWidgets';
 import './cssNavBar/NavBar.css'
+import { NavLink } from 'react-router-dom';
 
 
-function NavBar() {
+function NavBar({titulo}) {
 
   
   const [open, setOpen] = React.useState(false);
@@ -38,12 +39,15 @@ function NavBar() {
                 <div   style={{marginLeft:"-20px" }}>
                   <div className="menuDesplegable "
                        autoFocusItem={open} >
-                       
-                            <Button className='menuLinks' key='01'>Todo</Button>
-                       
-                            <Button className='menuLinks'key='02'>Naturaleza</Button>
-                      
-                            <Button className='menuLinks'key='03'>Personas</Button>
+                          <NavLink exact to='/'>
+                                <Button className='menuLinks' key='01'>Todo</Button>
+                            </NavLink>
+                            <NavLink exact to='/category/Naturaleza'>
+                                <Button className='menuLinks'key='02'>Naturaleza</Button>
+                            </NavLink >
+                            <NavLink exact to='/category/Personas'>
+                                <Button className='menuLinks'key='03'>Personas</Button>
+                            </NavLink>
                     
                   </div>
                 </div>
@@ -52,7 +56,7 @@ function NavBar() {
         </Popper>
           
                <div>
-                 <h1 className="titulo">Amo Pintar</h1>
+                 <h1 className="titulo">{titulo}</h1>
               </div>
               <div>
                 <CardWidgets/>

@@ -17,7 +17,6 @@ function Item({dataItem}) {
                             <h4>{dataItem.size}</h4>
                             <Button className="buttonList"
                             variant="contained"
-                        
                                             >Detalle</Button>
                         </div>   
                  </div>

@@ -1,4 +1,5 @@
 .navbar{
+ 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -35,6 +36,7 @@
     padding-left: 36px !important;
     padding-bottom: 10px;
     text-align: left;
+    text-decoration: none !important;
   }
 
   /* cambio que viene por defecto */
