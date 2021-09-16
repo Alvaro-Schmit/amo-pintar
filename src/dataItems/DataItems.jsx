@@ -1,15 +1,15 @@
-import Floki400x500 from '../../assets/image/picture/Floki400x500.jpg'
-import Deportista400x500 from '../../assets/image/picture/Deportista400x500.jpg'
-import Puente from '../../assets/image/picture/Puente500x345.jpg'
-import Ragnar from '../../assets/image/picture/Ragnar300x375.jpg'
-import Elefantes from '../../assets/image/picture/elefantes300x230.jpg'
-import Chita from '../../assets/image/picture/chita300x220.jpg'
-import Jimy from '../../assets/image/picture/Jimy 300x228.jpg'
-import ByNFloky from '../../assets/image/picture/ByNFloki352x400.jpg'
-import Bjorg from '../../assets/image/picture/Bjorg.png'
+import Floki400x500 from '../assets/image/picture/Floki400x500.jpg'
+import Deportista400x500 from '../assets/image/picture/Deportista400x500.jpg'
+import Puente from '../assets/image/picture/Puente500x345.jpg'
+import Ragnar from '../assets/image/picture/Ragnar300x375.jpg'
+import Elefantes from '../assets/image/picture/elefantes300x230.jpg'
+import Chita from '../assets/image/picture/chita300x220.jpg'
+import Jimy from '../assets/image/picture/Jimy 300x228.jpg'
+import ByNFloky from '../assets/image/picture/ByNFloki352x400.jpg'
+import Bjorg from '../assets/image/picture/Bjorg.png'
 
 
-import FiamaRossi from '../../assets/image/artistas/fiamaRossi.png'
+import FiamaRossi from '../assets/image/artistas/fiamaRossi.png'
 
 const dataItems =[
     {
@@ -49,7 +49,7 @@ const dataItems =[
     },
     {
         id: 'aaac',
-        name: 'Puente Calmo',
+        name: 'PuenteCalmo',
         smalldescription: 'Breve refencia o Subtitulo',
         image: Puente,
         description: 'descripcion del producton que tenga 3 renglones aproximadamente',
@@ -152,7 +152,7 @@ const dataItems =[
     },
     {
         id: 'aaai',
-        name: 'Floky B y N',
+        name: 'FlokyByN',
         smalldescription: 'Breve refencia o Subtitulo',
         image: ByNFloky,
         description: 'descripcion del producton que tenga 3 renglones aproximadamente',

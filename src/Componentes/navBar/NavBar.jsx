@@ -39,13 +39,13 @@ function NavBar({titulo}) {
                 <div   style={{marginLeft:"-20px" }}>
                   <div className="menuDesplegable "
                        autoFocusItem={open} >
-                          <NavLink exact to='/'>
-                                <Button className='menuLinks' key='01'>Todo</Button>
+                          <NavLink exact to='/' style={{textDecoration:"none"}}>
+                                <Button className='menuLinks' key='01' >Todo</Button>
                             </NavLink>
-                            <NavLink exact to='/category/Naturaleza'>
+                            <NavLink exact to='/category/Naturaleza' style={{textDecoration:"none"}}>
                                 <Button className='menuLinks'key='02'>Naturaleza</Button>
                             </NavLink >
-                            <NavLink exact to='/category/Personas'>
+                            <NavLink exact to='/category/Personas' style={{textDecoration:"none"}}>
                                 <Button className='menuLinks'key='03'>Personas</Button>
                             </NavLink>
                     

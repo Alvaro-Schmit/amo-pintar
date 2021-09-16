@@ -1,5 +1,6 @@
 
 import { Button } from '@material-ui/core'
+import { NavLink } from 'react-router-dom'
 import './item.css'
 import './obras.css'
 
@@ -15,9 +16,11 @@ function Item({dataItem}) {
                     <p>{dataItem.description}</p>
                         <div className="footerCardsList">
                             <h4>{dataItem.size}</h4>
-                            <Button className="buttonList"
-                            variant="contained"
-                                            >Detalle</Button>
+                            <NavLink exact to={`name/${dataItem.name}`} style={{textDecoration:"none"}}>
+                                <Button className="buttonList"
+                                         variant="contained"
+                                 >Detalle</Button>
+                            </NavLink>                
                         </div>   
                  </div>
             </div>

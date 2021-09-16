@@ -1,9 +1,9 @@
 import {useState, useEffect} from 'react';
 import ItemDetail from '../itemDetail/ItemDetail';
 import "./itemDetailContainer.css"
-import dataItems from '../dataItems/DataItems'
+import dataItems from '../../dataItems/DataItems'
 import Loader from '../loader/Loader'
-
+import { useParams } from 'react-router';
 
 const filterDataItem = dataItems.filter(filt => filt.name === 'Floki')
 
@@ -22,16 +22,24 @@ function ItemDetailContainer () {
     
     const [data, setData] = useState([])
     const [loading, setloading] = useState(true)
-    console.log(data.name);
+    const {nameId}= useParams()
 
     useEffect(() => {
-      getItem
+        if (nameId === undefined) {
+      
+        getItem
         .then(resp => setData(resp)
         )
         .catch(err => console.log(err))
         .finally(()=>setloading(false))
-        
-   }, )
+        }
+        else{
+            getItem
+            .then(resp => setData(resp.filter(it=> it.name===nameId)))
+            .catch(err => console.log(err))
+            
+        }
+   },[nameId] )
 
 
 

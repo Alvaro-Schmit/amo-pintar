@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import ItemList from '../itemList/ItemList';
 import "./itemListContainer.css"
-import dataItems from '../dataItems/DataItems'
+import dataItems from '../../dataItems/DataItems'
 import Loader from '../loader/Loader'
 import { useParams } from 'react-router';
 
