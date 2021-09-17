@@ -19,14 +19,14 @@ const getItem = new Promise((resolve, reject) => {
 function ItemDetailContainer() {
   const [data, setData] = useState([]);
   const [loading, setloading] = useState(true);
-  const { nameId } = useParams();
+  const { itemId } = useParams();
 
   useEffect(() => {
     getItem
       .then((resp) => {
         console.log(resp);
-        if (nameId) {
-          const product = resp.filter((item) => item.name === nameId);
+        if (itemId) {
+          const product = resp.filter((item) => item.name === itemId);
           setData(product);
         } else {
           console.log("producto no existente");
@@ -34,7 +34,7 @@ function ItemDetailContainer() {
       })
       .catch((err) => console.log(err))
       .finally(() => setloading(false));
-  }, [nameId]);
+  }, [itemId]);
 
   return (
     <div>

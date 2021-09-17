@@ -32,7 +32,7 @@ function ItemListContainer () {
         promise
         .then(resp => setData(resp))
         .catch(err => console.log(err))
-        
+        .finally(()=>setloading(false))
         }
         else{
             promise
