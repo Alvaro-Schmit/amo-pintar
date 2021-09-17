@@ -16,7 +16,7 @@ function Item({dataItem}) {
                     <p>{dataItem.description}</p>
                         <div className="footerCardsList">
                             <h4>{dataItem.size}</h4>
-                            <NavLink exact to={`name/${dataItem.name}`} style={{textDecoration:"none"}}>
+                            <NavLink exact to={`/detalle/${dataItem.name}`} style={{textDecoration:"none"}}>
                                 <Button className="buttonList"
                                          variant="contained"
                                  >Detalle</Button>
