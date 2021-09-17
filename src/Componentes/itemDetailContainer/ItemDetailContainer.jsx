@@ -26,7 +26,7 @@ function ItemDetailContainer() {
       .then((resp) => {
         console.log(resp);
         if (itemId) {
-          const product = resp.filter((item) => item.name === itemId);
+          const product = resp.filter((item) => item.id === itemId);
           setData(product);
         } else {
           console.log("producto no existente");

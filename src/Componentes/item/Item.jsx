@@ -19,7 +19,7 @@ function Item({ dataItem }) {
             <h4>{dataItem.size}</h4>
             <NavLink
               exact
-              to={`/detalle/${dataItem.name}`}
+              to={`/detalle/${dataItem.id}`}
               style={{ textDecoration: "none" }}
             >
               <Button className="buttonList" variant="contained">
