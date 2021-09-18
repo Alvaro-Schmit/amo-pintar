@@ -13,13 +13,13 @@
   }
 
   .BtnMenu{
-    background-color: rgba(57, 85, 117, 0.267);
+    background-color: rgba(57, 85, 117, 0.164) !important;
     color: whitesmoke !important;
     
   }
   
     .menuDesplegable {
-       background-color: rgba(37, 75, 97, 0.733);
+       background-color: rgba(37, 75, 97, 0.897);
       padding: 0px 20px 10px 0px  !important;
       margin-top: 19px;
       

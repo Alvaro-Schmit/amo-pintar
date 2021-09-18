@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState, useRef} from 'react';
 import { IconButton, Popper, Grow, Button, Toolbar} from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
 import CardWidgets from '../CardWidgets/CardWidgets';
@@ -9,8 +9,8 @@ import { NavLink } from 'react-router-dom';
 function NavBar({titulo}) {
 
   
-  const [open, setOpen] = React.useState(false);
-  const anchorRef = React.useRef(null);
+  const [open, setOpen] = useState(false);
+  const anchorRef = useRef(null);
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -69,3 +69,7 @@ function NavBar({titulo}) {
 }
 
 export default NavBar
+
+// Puedes en crear un nuevo estado dentro del
+// Componente que sea algo así como const [showSideBar, serShowSideBar] = useState(false); después usas un useEffect para que montes una setTimeOut y le des por ejemplo 3 seg para que sete el showSideBar a true … y con eso puede cambiar el valor de display: none … es una opción no más
+// Mi sugerencia es que más que desaparezca, le asignes una propiedad en css para que cuando la página sea menor (por ejemplo a 760) solo desaparezca
