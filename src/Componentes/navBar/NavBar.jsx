@@ -37,8 +37,7 @@ function NavBar({titulo}) {
           {({ TransitionProps, placement }) => (
             <Grow {...TransitionProps} style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}>
                 <div   style={{marginLeft:"-20px" }}>
-                  <div className="menuDesplegable "
-                       autoFocusItem={open} >
+                  <div className="menuDesplegable ">
                           <NavLink exact to='/' style={{textDecoration:"none"}}>
                                 <Button className='menuLinks' key='01' >Todo</Button>
                             </NavLink>

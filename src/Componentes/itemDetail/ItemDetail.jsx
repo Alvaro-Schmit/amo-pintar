@@ -1,21 +1,27 @@
 import ItemCount from '../itemCount/ItemCount'
 import './obrasDetail.css'
 import './itemDetail.css'
+import { useState } from 'react'
 
-const onAdd =(count)=>{
-    alert(`Agregaste ${count} produto al carrito`)
-  }
 
 
 
 function ItemDetail({data}) {
+
+const [cantidadSelec, setCantidadSelec] = useState(0)
+
+
+const onAdd =(count)=>{
+    console.log(`Agregaste ${count} produto al carrito`)
+    setCantidadSelec(count)
+  }
     return (
         <div className="bigcardContainer">  
                
             <div className="cardContainer">
                  
-                {data.map(dat =>
-                                <div className='cards' >
+                {data.map(dat => 
+                                <div className='cards' key={dat.id}> 
                                         <div className='container111'>
                                             <img src={dat.image} alt={dat.name} className={dat.detailClassName} />
                                         </div>
@@ -26,7 +32,7 @@ function ItemDetail({data}) {
                                             </div>
                                             <div className="footerCards">
                                                 <h4>{dat.price}</h4>
-                                                <ItemCount onAdd={onAdd} stock={1} initial={1} />
+                                                <ItemCount onAdd={onAdd} stock={4} initial={1} />
                                                 {/* <Button className="button"
                                                         variant="contained"  >Comprar</Button> */}
                                             </div>
