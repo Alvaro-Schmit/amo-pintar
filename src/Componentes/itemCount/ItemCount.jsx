@@ -1,9 +1,9 @@
-import React, { createContext } from "react";
+import React from "react";
 import { useState } from "react";
 import { Button } from "@material-ui/core";
 import "./itemCount.css";
 
-export const contextCount = createContext([]);
+
 
 function ItemCount({ stock, initial, onAdd }) {
   const [count, setCount] = useState(initial);
@@ -13,7 +13,7 @@ function ItemCount({ stock, initial, onAdd }) {
   };
 
   return (
-    <contextCount.Provider value={count}>
+   <>
       <div className="counterContainer">
         <div className="counter">
           <button
@@ -43,7 +43,7 @@ function ItemCount({ stock, initial, onAdd }) {
           Comprar
         </Button>
       </div>
-    </contextCount.Provider>
+    </>
   );
 }
 

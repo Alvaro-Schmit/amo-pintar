@@ -4,6 +4,7 @@ import NavBar from "./Componentes/navBar/NavBar";
 import ItemDetailContainer from "./Componentes/itemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./Componentes/itemListContainer/IitemListContainer.jsx";
 import Cart from "./Componentes/cart/Cart";
+import CardContextProvider from './Componentes/cartContext/CartContext'
 
 
 
@@ -25,6 +26,7 @@ function App() {
 
   
   return (
+    <CardContextProvider>
     <contextApp.Provider value={{state, setStateContext}}>
       <Router>
         <NavBar titulo="Amo pintar" />
@@ -48,6 +50,7 @@ function App() {
         </Switch>
       </Router>
     </contextApp.Provider>
+    </CardContextProvider>
   );
 }
 

@@ -4,15 +4,21 @@ import "./itemDetail.css";
 import { Button } from "@material-ui/core";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useCartContext } from "../cartContext/CartContext";
 
 function ItemDetail({ data }) {
-  const [cantidadSelec, setCantidadSelec] = useState(0);
+  const [cantidadSelect, setCantidadSelect] = useState(0);
   const [changeButton, setChangeButton] = useState(true);
+  const { addToCart } = useCartContext;
+  console.log(addToCart);
+  console.log(cantidadSelect);
 
   const onAdd = (count) => {
+   
     console.log(`Agregaste ${count} produto al carrito`);
-    setCantidadSelec(count);
+    setCantidadSelect(count);
     setChangeButton(false);
+    addToCart({data:data, counter:count })
   };
 
   return (

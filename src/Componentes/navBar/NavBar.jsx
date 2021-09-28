@@ -1,10 +1,10 @@
-import { useState, useRef, useContext } from "react";
+import { useState, useRef } from "react";
 import { IconButton, Popper, Grow, Button, Toolbar } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import CardWidgets from "../CardWidgets/CardWidgets";
 import "./cssNavBar/NavBar.css";
 import { NavLink } from "react-router-dom";
-import { contextCount } from "../itemCount/ItemCount";
+
 
 function NavBar({ titulo }) {
   const [open, setOpen] = useState(false);
@@ -14,8 +14,7 @@ function NavBar({ titulo }) {
     setOpen((prevOpen) => !prevOpen);
   };
 
-  const { count } = useContext(contextCount);
-  console.log(count);
+ 
 
   return (
     <>
