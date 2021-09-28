@@ -14,11 +14,12 @@ function ItemDetail({ data }) {
   console.log(cantidadSelect);
 
   const onAdd = (count) => {
-   
+    addToCart({data:data, counter:count })
+    console.log(addToCart)
     console.log(`Agregaste ${count} produto al carrito`);
     setCantidadSelect(count);
     setChangeButton(false);
-    addToCart({data:data, counter:count })
+
   };
 
   return (
