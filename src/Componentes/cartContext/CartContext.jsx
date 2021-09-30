@@ -9,8 +9,8 @@ export default function CartContextProvider({ children }) {
   function addToCart(data) {
        setCartList([...cartList, data]);
   }
-  console.log(setCartList);
-  console.log(cartList);
+  
+  console.log(addToCart);
   
   function clearList() {
       cartList([]);

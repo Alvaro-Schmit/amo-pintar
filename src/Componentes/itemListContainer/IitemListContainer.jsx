@@ -9,7 +9,7 @@ const promise = new Promise((resolve, reject)=>{
     const status = 200
     if(status===200){
         setTimeout(() => {
-            // console.log(dataItems)...aca llega el array emisproductos
+            
             resolve(dataItems)
         }, 2000);
     }else{
@@ -25,8 +25,7 @@ function ItemListContainer () {
 
 
     useEffect(() => {
-        // console.log(categoryId); aca llega la categoria seleccionada Naturaleza o Personas si hago 
-        // click en todo dice undefine
+       
         if (categoryId === undefined) {
      
         promise

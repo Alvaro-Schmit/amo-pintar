@@ -35,7 +35,7 @@ function ItemDetailContainer() {
       .catch((err) => console.log(err))
       .finally(() => setloading(false));
   }, [itemId]);
-
+console.log(data);
   return (
     <div>
       {loading ? (

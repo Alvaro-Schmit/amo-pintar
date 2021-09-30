@@ -16,7 +16,6 @@ const categorias = [
 
  export const contextApp = createContext([]);
 function App() {
-  console.log(contextApp);
 
   const [state, setState] = useState(categorias)
 

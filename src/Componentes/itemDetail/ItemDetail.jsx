@@ -9,18 +9,21 @@ import { useCartContext } from "../cartContext/CartContext";
 function ItemDetail({ data }) {
   const [cantidadSelect, setCantidadSelect] = useState(0);
   const [changeButton, setChangeButton] = useState(true);
-  const { addToCart } = useCartContext;
-  console.log(addToCart);
-  console.log(cantidadSelect);
+  const { addToCart } = useCartContext();
+  
+
 
   const onAdd = (count) => {
-    addToCart({data:data, counter:count })
-    console.log(addToCart)
+    addToCart({data:data, quantity:count })
+   
+    
     console.log(`Agregaste ${count} produto al carrito`);
-    setCantidadSelect(count);
+    setCantidadSelect(cantidadSelect);
     setChangeButton(false);
+   
 
   };
+
 
   return (
     <div className="bigcardContainer">
