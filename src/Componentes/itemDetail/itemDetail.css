@@ -110,6 +110,33 @@ h4{
   margin-left: 20px;
 }
 
+
+.terminarAdquirir{
+width: 90%;
+margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.buttonTerminar{
+text-decoration: none;
+margin-bottom: 20px !important;
+margin-top: 20px !important;
+}
+
+
+.adquirirOtro{
+text-decoration: none;
+  margin-bottom: 20px !important;
+}
+
+/*///////////////////////////////////////////////*/
+
+
+
 @media only screen and (min-width: 0px) and (max-width: 560px){
   
 
@@ -151,10 +178,10 @@ margin-top: 50px;
 }
 
 
-@media only screen and (min-width: 561px) and (max-width: 900px){
+@media only screen and (min-width: 561px) and (max-width: 1002px){
 
 .textObra{
-  font-size: 14px;
+  font-size: 13px;
 }
 
 

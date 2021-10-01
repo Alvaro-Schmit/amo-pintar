@@ -10,20 +10,16 @@ function ItemDetail({ data }) {
   const [cantidadSelect, setCantidadSelect] = useState(0);
   const [changeButton, setChangeButton] = useState(true);
   const { addToCart } = useCartContext();
-  
-
 
   const onAdd = (count) => {
-    addToCart({data:data, quantity:count })
-   
-    
     console.log(`Agregaste ${count} produto al carrito`);
+
+    addToCart({ data,  count });
+
     setCantidadSelect(cantidadSelect);
     setChangeButton(false);
-   
-
   };
-
+  console.log(addToCart);
 
   return (
     <div className="bigcardContainer">
@@ -42,27 +38,38 @@ function ItemDetail({ data }) {
                 <h2 className="tituloDetail">{dat.name}</h2>
                 <p className="textObra">{dat.detaildescription}</p>
               </div>
-              <div className="footerCards">
+              <>
                 {changeButton ? (
-                  <>
+                  <div className="footerCards">
                     <h4>{dat.price}</h4>
                     <ItemCount onAdd={onAdd} stock={4} initial={1} />
-                  </>
+                  </div>
                 ) : (
-                  <NavLink
-                    exact
-                    to={"/cart"}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <Button className="buttonTerminar" variant="contained">
-                      Terminar tu compra
+                  <div className="terminarAdquirir">
+                    <NavLink
+                      exact
+                      to={"/cart"}
+                      className="buttonTerminar"
+                    >
+                      <Button  
+                      variant="contained" fullWidth
+                      color="primary"
+                      >
+                        Terminar tu compra
+                      </Button>
+                    </NavLink>
+                    <NavLink
+                      exact
+                      to={"/"}
+                      className="adquirirOtro"
+                    >
+                    <Button  variant="contained" style={{width:'100%'}}>
+                      Adquirir otra Obra
                     </Button>
-                  </NavLink>
+                    </NavLink>
+                  </div>
                 )}
-
-                {/* <Button className="button"
-                                                        variant="contained"  >Comprar</Button> */}
-              </div>
+              </>
             </div>
             <div className="container333">
               <p className="textArtista">{dat.datosAutor}</p>
