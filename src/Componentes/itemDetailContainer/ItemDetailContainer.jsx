@@ -24,9 +24,9 @@ function ItemDetailContainer() {
   useEffect(() => {
     getItem
       .then((resp) => {
-        console.log(resp);
+     
         if (itemId) {
-          const product = resp.filter((item) => item.id === itemId);
+          const product = resp.find((item) => item.id === itemId);
           setData(product);
         } else {
           console.log("producto no existente");
@@ -35,7 +35,7 @@ function ItemDetailContainer() {
       .catch((err) => console.log(err))
       .finally(() => setloading(false));
   }, [itemId]);
-console.log(data);
+
   return (
     <div>
       {loading ? (

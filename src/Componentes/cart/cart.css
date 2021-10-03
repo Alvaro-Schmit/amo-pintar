@@ -1,0 +1,42 @@
+.cartContainer{
+    width: 86%;
+    margin: auto;
+    background-color: rgba(56, 53, 63, 0.431);
+
+}
+
+
+
+.articlesContainer{
+    
+   
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+
+
+.divArticle{
+    width: 20%;
+}
+
+
+
+.imageCart{
+    width: 65px;
+    margin-top: 10px;
+    margin-left: 0px;
+    border: none;
+}
+
+.pagarVolver{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

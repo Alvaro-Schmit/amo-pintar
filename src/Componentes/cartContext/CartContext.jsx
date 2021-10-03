@@ -6,23 +6,42 @@ export const useCartContext = ()=>useContext(cartContext)
 export default function CartContextProvider({ children }) {
   const [cartList, setCartList] = useState([]);
 
- 
-  console.log(cartList);
- const addToCart = (data, quantity)=>{
+  // function addToCart(data) {
+  //      setCartList([...cartList, data]);
+  // }
 
-    const index= cartList.findIndex(i=> i.data.id=data.id)
-    if (index>-1){
+  const addToCart = (data, quantity)=>{
+
+    const index= cartList.findIndex(i=> i.data.id===data.id)
+    if (index >-1){
       const addValue= cartList[index].quantity
 
       cartList.splice(index, 1)
-      setCartList([...cartList, {data, quantity: quantity = addValue}])
+      setCartList([...cartList, {data, quantity: quantity += addValue}])
 
      }
-     else{setCartList([...cartList,{data, quantity}])
+     else{setCartList([...cartList, {data, quantity}])
     }
 
+ 
+    
  }
-  
+
+
+ const deleteFromCart =(data)=>{
+   const deleteProduct = cartList.filter((prod)=> prod.data.id !== data.data.id);
+    setCartList(...deleteProduct)
+  }
+
+  const iconCart =()=> {
+    return cartList.reduce((acum, valor)=>acum + valor.quantity, 0)
+  }
+
+  const totalPrice = () => {
+    return cartList.reduce((acum, valor) => (acum+(valor.quantity * valor.item.price )), 0)
+  }
+ 
+  console.log(cartList);
   
   
      function clearList() {
@@ -34,7 +53,10 @@ export default function CartContextProvider({ children }) {
       value={{
         cartList,
         addToCart,
-        clearList
+        deleteFromCart,
+        totalPrice,
+        clearList,
+        iconCart
       }}
     >
       {children}

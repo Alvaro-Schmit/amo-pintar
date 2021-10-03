@@ -14,34 +14,34 @@ function ItemDetail({ data }) {
   const onAdd = (count) => {
     console.log(`Agregaste ${count} produto al carrito`);
 
-    addToCart({ data,  count });
-
+    addToCart(data, count );
+    
     setCantidadSelect(cantidadSelect);
     setChangeButton(false);
   };
-  console.log(addToCart);
+ 
 
   return (
     <div className="bigcardContainer">
       <div className="cardContainer">
-        {data.map((dat) => (
-          <div className="cards" key={dat.id}>
+        
+          <div className="cards" key={data.id}>
             <div className="container111">
               <img
-                src={dat.image}
-                alt={dat.name}
-                className={dat.detailClassName}
+                src={data.image}
+                alt={data.name}
+                className={data.detailClassName}
               />
             </div>
             <div className="container222">
               <div>
-                <h2 className="tituloDetail">{dat.name}</h2>
-                <p className="textObra">{dat.detaildescription}</p>
+                <h2 className="tituloDetail">{data.name}</h2>
+                <p className="textObra">{data.detaildescription}</p>
               </div>
               <>
                 {changeButton ? (
                   <div className="footerCards">
-                    <h4>{dat.price}</h4>
+                    <h4>{data.price}</h4>
                     <ItemCount onAdd={onAdd} stock={4} initial={1} />
                   </div>
                 ) : (
@@ -72,16 +72,16 @@ function ItemDetail({ data }) {
               </>
             </div>
             <div className="container333">
-              <p className="textArtista">{dat.datosAutor}</p>
+              <p className="textArtista">{data.datosAutor}</p>
               <img
-                src={dat.fotoArtista}
-                alt={dat.artista}
+                src={data.fotoArtista}
+                alt={data.artista}
                 className="artistaStyle"
               />
-              <h4>{dat.artista}</h4>
+              <h4>{data.artista}</h4>
             </div>
           </div>
-        ))}
+     
       </div>
     </div>
   );

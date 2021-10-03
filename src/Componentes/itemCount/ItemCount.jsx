@@ -8,8 +8,11 @@ import "./itemCount.css";
 function ItemCount({ stock, initial, onAdd }) {
   const [count, setCount] = useState(initial);
 
+  
   const handleCount = (value) => {
-    setCount(count + value);
+    
+    setCount(count + value)
+    console.log("item count",count)
   };
 
   return (
