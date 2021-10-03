@@ -4,9 +4,13 @@ import MenuIcon from "@material-ui/icons/Menu";
 import CardWidgets from "../CardWidgets/CardWidgets";
 import "./cssNavBar/NavBar.css";
 import { NavLink } from "react-router-dom";
+import { useCartContext } from "../cartContext/CartContext";
 
 
 function NavBar({ titulo }) {
+
+const {iconCart}= useCartContext()
+
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
 
@@ -81,7 +85,14 @@ function NavBar({ titulo }) {
           <h1 className="titulo">{titulo}</h1>
         </div>
         <div>
+          <NavLink 
+           exact
+           to={"/cart"}>
+             <div className='numberCardWidgets'>
+            <p> {iconCart()}</p>
           <CardWidgets />
+          </div>
+          </NavLink>
         </div>
       </Toolbar>
     </>

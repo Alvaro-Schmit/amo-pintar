@@ -47,4 +47,11 @@
   display: block !important;
 }
 
+.numberCardWidgets{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
   

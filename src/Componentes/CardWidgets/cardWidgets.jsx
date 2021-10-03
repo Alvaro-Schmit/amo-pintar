@@ -7,6 +7,7 @@ function cardWidgets() {
     return (
         <Button>
             <img src={CardWidgets} alt="logo diamante" className="cardWidgetsClass"/>
+            
         </Button>
     )
 }
