@@ -37,7 +37,7 @@ export default function Cart() {
                 variant="outlined"
                 
                 >
-                  {" "}
+                 
                   <DeleteIcon>
                     <svg data-testid="DeleteIcon"></svg>
                   </DeleteIcon>

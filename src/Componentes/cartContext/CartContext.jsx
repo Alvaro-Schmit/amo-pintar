@@ -30,7 +30,7 @@ export default function CartContextProvider({ children }) {
 
  const deleteFromCart =(data)=>{
    const deleteProduct = cartList.filter((prod)=> prod.data.id !== data.data.id);
-    setCartList(...deleteProduct)
+    setCartList([...deleteProduct])
   }
 
   const iconCart =()=> {
