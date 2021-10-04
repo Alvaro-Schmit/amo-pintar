@@ -41,7 +41,7 @@ function ItemDetail({ data }) {
               <>
                 {changeButton ? (
                   <div className="footerCards">
-                    <h4>{data.price}</h4>
+                    <h4>U$S {data.price}</h4>
                     <ItemCount onAdd={onAdd} stock={4} initial={1} />
                   </div>
                 ) : (

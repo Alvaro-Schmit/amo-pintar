@@ -39,7 +39,7 @@ export default function CartContextProvider({ children }) {
   }
 
   const totalPrice = () => {
-    return cartList.reduce((acum, valor) => (acum+(valor.quantity * valor.item.price )), 0)
+    return cartList.reduce((acum, valor) => (acum+(valor.quantity * valor.data.price )), 0)
   }
  
   console.log(cartList);

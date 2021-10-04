@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import "./cart.css";
 
 export default function Cart() {
-  const { cartList, deleteFromCart } = useCartContext();
+  const { cartList, deleteFromCart, totalPrice } = useCartContext();
 
   return (
     <>
@@ -46,7 +46,7 @@ export default function Cart() {
             </div>
           ))}
         </div>
-        <h2>Precio Total : </h2>
+        <h2>Precio Total : U$S {totalPrice()}</h2>
       </div>
 
       <div className="pagarVolver">

@@ -26,7 +26,7 @@ const dataItems =[
         fotoArtista: FiamaRossi,
         datosAutor: 'La autora de esta Obra Fiama Rossi, nacio en 1997 en un Publito llamado Soca al centro este de Uruguay. Desde pequeña demostro su facinacion por la exprecion plastica y si bien hoy dia se desempeña como profesora de educación fisica, no deja de desarrollar su talento con la pintura y continua descubriendo su pasion por ella',
         category: 'Personas',
-        price: '2200 U$S',
+        price: 2200,
          size: '240 x 50'
         
     },
@@ -43,7 +43,7 @@ const dataItems =[
         fotoArtista: FiamaRossi,
         datosAutor: 'La autora de esta Obra Fiama Rossi, nacio en 1997 en un Publito llamado Soca al centro este de Uruguay. Desde pequeña demostro su facinacion por la exprecion plastica y si bien hoy dia se desempeña como profesora de educación fisica, no deja de desarrollar su talento con la pintura y continua descubriendo su pasion por ella',
         category: 'Personas',
-        price: '800 U$S',
+        price:800,
         size: '40 x 50'
         
     },
@@ -60,7 +60,7 @@ const dataItems =[
         fotoArtista: FiamaRossi,
         datosAutor: 'La autora de esta Obra Fiama Rossi, nacio en 1997 en un Publito llamado Soca al centro este de Uruguay. Desde pequeña demostro su facinacion por la exprecion plastica y si bien hoy dia se desempeña como profesora de educación fisica, no deja de desarrollar su talento con la pintura y continua descubriendo su pasion por ella',
         category: 'Naturaleza',
-        price: '400 U$S',
+        price:400,
         size: '40 x 50'
         
     },
@@ -77,7 +77,7 @@ const dataItems =[
         fotoArtista: FiamaRossi,
         datosAutor: 'La autora de esta Obra Fiama Rossi, nacio en 1997 en un Publito llamado Soca al centro este de Uruguay. Desde pequeña demostro su facinacion por la exprecion plastica y si bien hoy dia se desempeña como profesora de educación fisica, no deja de desarrollar su talento con la pintura y continua descubriendo su pasion por ella',
         category: 'Naturaleza',
-        price: '500 U$S',
+        price:500,
         size: '40 x 50'
         
     },
@@ -94,7 +94,7 @@ const dataItems =[
         fotoArtista: FiamaRossi,
         datosAutor: 'La autora de esta Obra Fiama Rossi, nacio en 1997 en un Publito llamado Soca al centro este de Uruguay. Desde pequeña demostro su facinacion por la exprecion plastica y si bien hoy dia se desempeña como profesora de educación fisica, no deja de desarrollar su talento con la pintura y continua descubriendo su pasion por ella',
         category: 'Naturaleza',
-        price: '800 U$S',
+        price:800,
         size: '40 x 50'
         
     },
@@ -111,7 +111,7 @@ const dataItems =[
         fotoArtista: FiamaRossi,
         datosAutor: 'La autora de esta Obra Fiama Rossi, nacio en 1997 en un Publito llamado Soca al centro este de Uruguay. Desde pequeña demostro su facinacion por la exprecion plastica y si bien hoy dia se desempeña como profesora de educación fisica, no deja de desarrollar su talento con la pintura y continua descubriendo su pasion por ella',
         category: 'Personas',
-        price: '1200 U$S',
+        price: 1200,
          size: '40 x 50'
         
         
@@ -129,7 +129,7 @@ const dataItems =[
         fotoArtista: FiamaRossi,
         datosAutor: 'La autora de esta Obra Fiama Rossi, nacio en 1997 en un Publito llamado Soca al centro este de Uruguay. Desde pequeña demostro su facinacion por la exprecion plastica y si bien hoy dia se desempeña como profesora de educación fisica, no deja de desarrollar su talento con la pintura y continua descubriendo su pasion por ella',
         category: 'Personas',
-        price: '900 U$S',
+        price:900,
         size: '40 x 50'
         
     },
@@ -146,7 +146,7 @@ const dataItems =[
         fotoArtista: FiamaRossi,
         datosAutor: 'La autora de esta Obra Fiama Rossi, nacio en 1997 en un Publito llamado Soca al centro este de Uruguay. Desde pequeña demostro su facinacion por la exprecion plastica y si bien hoy dia se desempeña como profesora de educación fisica, no deja de desarrollar su talento con la pintura y continua descubriendo su pasion por ella',
         category: 'Personas',
-        price: '1300 U$S',
+        price: 1300,
          size: '140 x 50'
     
     },
@@ -163,7 +163,7 @@ const dataItems =[
         fotoArtista: FiamaRossi,
         datosAutor: 'La autora de esta Obra Fiama Rossi, nacio en 1997 en un Publito llamado Soca al centro este de Uruguay. Desde pequeña demostro su facinacion por la exprecion plastica y si bien hoy dia se desempeña como profesora de educación fisica, no deja de desarrollar su talento con la pintura y continua descubriendo su pasion por ella',
         category: 'Personas',
-        price: '1100 U$S',
+        price: 1100,
          size: '140 x 50'
         
     }
