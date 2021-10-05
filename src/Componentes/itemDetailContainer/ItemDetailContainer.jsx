@@ -22,12 +22,14 @@ function ItemDetailContainer() {
   const { itemId } = useParams();
 
   useEffect(() => {
+    
     getItem
       .then((resp) => {
      
         if (itemId) {
           const product = resp.find((item) => item.id === itemId);
           setData(product);
+          
         } else {
           console.log("producto no existente");
         }

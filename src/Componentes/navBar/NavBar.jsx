@@ -89,7 +89,7 @@ const {iconCart}= useCartContext()
            exact
            to={"/cart"}>
              <div className='numberCardWidgets'>
-            <p> {iconCart()}</p>
+            <p style={{textDecoration:'none'}}> {iconCart()}</p>
           <CardWidgets />
           </div>
           </NavLink>
