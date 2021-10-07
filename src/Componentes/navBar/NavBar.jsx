@@ -6,10 +6,10 @@ import "./cssNavBar/NavBar.css";
 import { NavLink } from "react-router-dom";
 import { useCartContext } from "../cartContext/CartContext";
 
-
 function NavBar({ titulo }) {
+  const { iconCart } = useCartContext();
 
-const {iconCart}= useCartContext()
+  console.log(iconCart);
 
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
@@ -17,8 +17,6 @@ const {iconCart}= useCartContext()
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
-
- 
 
   return (
     <>
@@ -85,13 +83,20 @@ const {iconCart}= useCartContext()
           <h1 className="titulo">{titulo}</h1>
         </div>
         <div>
-          <NavLink 
-           exact
-           to={"/cart"}>
-             <div className='numberCardWidgets'>
-            <p style={{textDecoration:'none'}}> {iconCart()}</p>
-          <CardWidgets />
-          </div>
+          <NavLink exact to={"/cart"}>
+            <div className="numberCardWidgets">
+              {iconCart() === 0 ? (
+                <>
+                  <p></p>
+                </>
+              ) : (
+                <>
+                  <p style={{ textDecoration: "none" }}> {iconCart()}</p>
+                </>
+              )}
+
+              <CardWidgets />
+            </div>
           </NavLink>
         </div>
       </Toolbar>
