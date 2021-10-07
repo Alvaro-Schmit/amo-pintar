@@ -46,9 +46,11 @@ export default function CartContextProvider({ children }) {
   
   
      function clearList() {
-      cartList([]);
+      setCartList([]);
   }
 
+  
+  
   return (
     <cartContext.Provider
       value={{
@@ -57,7 +59,8 @@ export default function CartContextProvider({ children }) {
         deleteFromCart,
         totalPrice,
         clearList,
-        iconCart
+        iconCart,
+       
       }}
     >
       {children}
