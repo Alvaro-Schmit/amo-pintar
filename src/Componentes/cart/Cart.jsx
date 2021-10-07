@@ -6,24 +6,20 @@ import "./cart.css";
 
 export default function Cart() {
   const { cartList, deleteFromCart, totalPrice, clearList } = useCartContext();
-console.log(cartList);
+  console.log(cartList);
   return (
     <>
       {cartList.length === 0 ? (
         <>
-        <h1>No tienes Ningun Producto en tu carrito</h1>
-        <center>
-        <NavLink exact to={"/"} className="adquirirOtro">
-        <Button
-          variant="contained"
-          color="primary"
-         
-        >
-          Adquirir un producto
-        </Button>
-      </NavLink>
-      </center>
-      </>
+          <h1>No tienes Ningun Producto en tu carrito</h1>
+          <center>
+            <NavLink exact to={"/"} className="adquirirOtro">
+              <Button variant="contained" color="primary">
+                Adquirir un producto
+              </Button>
+            </NavLink>
+          </center>
+        </>
       ) : (
         <>
           <div className="cartContainer">
@@ -61,9 +57,22 @@ console.log(cartList);
                 </div>
               ))}
             </div>
+            <div className='totalBorrar'>
             <h2>Precio Total : U$S {totalPrice()}</h2>
+            <Button onClick={() => clearList()} variant="outlined">
+            <div className="borrarTodo">
+            <p style={{paddingRight:"10px"}}> BORRAR TODO</p>
+            <DeleteIcon>
+              <svg data-testid="DeleteIcon"
+              className='buttonClearAll'
+              
+              ></svg>
+            </DeleteIcon>
+            </div>
+          </Button>
           </div>
-
+          </div>
+          <br /><br />
           <div className="pagarVolver">
             {" "}
             <NavLink exact to={"/"} className="adquirirOtro">
@@ -81,12 +90,7 @@ console.log(cartList);
               </Button>
             </NavLink>
           </div>
-          <Button onClick={() => clearList()} variant="outlined">
-            BORRAR TODO
-            <DeleteIcon>
-              <svg data-testid="DeleteIcon"></svg>
-            </DeleteIcon>
-          </Button>
+          
         </>
       )}
     </>

@@ -40,3 +40,19 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+.borrarTodo{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totalBorrar{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+  
+}
