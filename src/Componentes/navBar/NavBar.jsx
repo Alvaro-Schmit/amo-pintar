@@ -66,7 +66,7 @@ function NavBar({ titulo }) {
                   </NavLink>
                   <NavLink
                     exact
-                    to="/category/Personas"
+                    to="/category/Retratos"
                     style={{ textDecoration: "none" }}
                   >
                     <Button className="menuLinks" key="03">
