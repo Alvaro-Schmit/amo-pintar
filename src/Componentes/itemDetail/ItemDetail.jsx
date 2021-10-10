@@ -36,7 +36,7 @@ function ItemDetail({ data }) {
             <div className="container222">
               <div>
                 <h2 className="tituloDetail">{data.name}</h2>
-                <p className="textObra">{data.detaildescription}</p>
+                <p className="textObra">{data.detailDescription}</p>
               </div>
               <>
                 {changeButton ? (
