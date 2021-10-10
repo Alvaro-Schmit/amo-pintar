@@ -19,7 +19,7 @@ function ItemDetail({ data }) {
     setCantidadSelect(cantidadSelect);
     setChangeButton(false);
   };
- 
+ console.log(data);
 
   return (
     <div className="bigcardContainer">

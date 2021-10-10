@@ -4,6 +4,7 @@ import "./itemDetailContainer.css";
 import dataItems from "../../dataItems/DataItems";
 import Loader from "../loader/Loader";
 import { useParams } from "react-router";
+import { getFirestore } from "../../services/getFirebase";
 
 const getItem = new Promise((resolve, reject) => {
   const status = 200;
@@ -23,20 +24,35 @@ function ItemDetailContainer() {
 
   useEffect(() => {
     
-    getItem
-      .then((resp) => {
-     
-        if (itemId) {
-          const product = resp.find((item) => item.id === itemId);
-          setData(product);
-          
-        } else {
-          console.log("producto no existente");
-        }
-      })
-      .catch((err) => console.log(err))
-      .finally(() => setloading(false));
-  }, [itemId]);
+    if(itemId){
+
+      const dbqueryDetail = getFirestore() 
+
+      dbqueryDetail.collection('data').doc(itemId).get()
+.then ((resp)=>{  
+
+  console.log(resp);
+          setData({id: resp.id, ...resp.data()});})
+
+          .catch(err => console.log(err))
+          .finally(()=>setloading(false))
+      
+    }
+    else{
+       const dbqueryDetail = getFirestore() 
+
+      dbqueryDetail.collection('data').doc(itemId).get()
+      .then(resp=>{
+        setData(resp.docs.map(dataOne => ({id: dataOne.id, ...dataOne.data()})))
+       
+        console.log(resp)})
+    .catch(err => console.log(err))
+    .finally(()=>setloading(false))
+
+
+    }
+  
+}  , [itemId]);
 
   return (
     <div>
