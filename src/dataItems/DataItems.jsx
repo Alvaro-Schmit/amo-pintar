@@ -163,7 +163,7 @@ const dataItems =[
         detailClassName:"detailbyNFloky",
         artista: 'Fiama Rossi',
         fotoArtista: 'https://i.pinimg.com/originals/84/90/03/84900374e43f27fe907d2738d28fa2c5.jpg',
-        datosAutor: 'La autora de esta Obra Fiama Rossi, nacio en 1997 en un Publito llamado Soca al centro este de Uruguay. Desde pequeña demostro su facinacion por la exprecion plastica y si bien hoy dia se desempeña como profesora de educación fisica, no deja de desarrollar su talento con la pintura y continua descubriendo su pasion por ella',
+        datosAutor: 'La autora de esta Obra Fiama Rossi, nacio en 1997 en un Publito llamado Soca al centro este de Uruguay. Desde pequeña demostro su facinacion por la exprecion plastica y si bien hoy dia se desempeña como profesora de educación fisica, no deja de desarrollar su talento con la pintura y continua descubriendo su pasión por ella',
         category: 'Retratos',
         price: 1100,
          size: '140 x 50'

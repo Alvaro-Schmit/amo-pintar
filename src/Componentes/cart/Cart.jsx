@@ -3,6 +3,7 @@ import { Button } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { NavLink } from "react-router-dom";
 import "./cart.css";
+import CartForm from "./cartForm";
 
 export default function Cart() {
   const { cartList, deleteFromCart, totalPrice, clearList } = useCartContext();
@@ -90,7 +91,7 @@ export default function Cart() {
               </Button>
             </NavLink>
           </div>
-          
+          <CartForm/>
         </>
       )}
     </>
