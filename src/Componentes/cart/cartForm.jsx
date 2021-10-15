@@ -15,9 +15,6 @@ const CartForm = () => {
 
 
     const {cartList, totalPrice} = useCartContext()
-
-   
-        
     const handleOnSubmit = (e) =>{        
         e.preventDefault()        
         let orden = {}
@@ -47,33 +44,7 @@ const CartForm = () => {
                 tel: '',
                 email: ''
             }) 
-            //borrarLista()
         )
-            
-            
-        //Actualiza todos los items que estan en el listado de Cart del CartContext
-        const itemsToUpdate = db.collection('items').where(
-            firebase.firestore.FieldPath.documentId(), 'in', cartList.map(i=> i.data.id)
-        )
-            
-        const batch = db.batch();
-            
-        // por cada item restar del stock la cantidad de el carrito
-        
-        itemsToUpdate.get()
-        .then( collection=>{
-            collection.docs.forEach(docSnapshot => {
-                batch.update(docSnapshot.ref, {
-                    stock: docSnapshot.data().stock - cartList.find(item => item.data.id === docSnapshot.id).quantity
-                })
-            })
-
-            batch.commit().then(res =>{
-                console.log('resultado batch:', res)
-            })
-        })
-        
-       
     }
 
     function handleOnChange(e) {
