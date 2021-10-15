@@ -1,8 +1,6 @@
 import {useState} from 'react'
-import { useCartContext } from "../../context/cartContext";
+import { useCartContext } from "../cartContext/CartContext";
 import { getFirestore } from '../../services/getFirebase';
-
-//esta importación hay que volver a hacerla
 import  firebase  from 'firebase'
 import 'firebase/firestore'
 
@@ -16,7 +14,7 @@ const CartForm = () => {
     })
 
 
-    const {carList, precioTotal} = useCartContext()
+    const {cartList, totalPrice} = useCartContext()
 
    
         
@@ -28,12 +26,12 @@ const CartForm = () => {
        
         orden.buyer = formData
         
-        orden.total = precioTotal();
+        orden.total = totalPrice();
         
-        orden.items = carList.map(cartItem => {
-            const id = cartItem.item.id;
-            const title = cartItem.item.title;
-            const price = cartItem.item.price * cartItem.quantity;
+        orden.datas = cartList.map(cartItem => {
+            const id = cartItem.data.id;
+            const title = cartItem.data.name;
+            const price = cartItem.data.price * cartItem.quantity;
             
             return {id, title, price}   
         })
@@ -41,7 +39,7 @@ const CartForm = () => {
 
         const db = getFirestore()
         db.collection('orders').add(orden)
-        .then(resp => alert(resp.id))
+        .then(resp => console.log(resp.id))
         .catch(err=> console.log(err))
         .finally(()=>
             setFormData({
@@ -55,7 +53,7 @@ const CartForm = () => {
             
         //Actualiza todos los items que estan en el listado de Cart del CartContext
         const itemsToUpdate = db.collection('items').where(
-            firebase.firestore.FieldPath.documentId(), 'in', carList.map(i=> i.item.id)
+            firebase.firestore.FieldPath.documentId(), 'in', cartList.map(i=> i.data.id)
         )
             
         const batch = db.batch();
@@ -66,7 +64,7 @@ const CartForm = () => {
         .then( collection=>{
             collection.docs.forEach(docSnapshot => {
                 batch.update(docSnapshot.ref, {
-                    stock: docSnapshot.data().stock - carList.find(item => item.item.id === docSnapshot.id).quantity
+                    stock: docSnapshot.data().stock - cartList.find(item => item.data.id === docSnapshot.id).quantity
                 })
             })
 
@@ -75,15 +73,7 @@ const CartForm = () => {
             })
         })
         
-        // //con id propio
-        // db.collection('orders').doc(id).set(orden)
-        
-        // //Ejemplo de actualizar
-        // db.collection('orders').doc('TQQaDzL8QWzannCWCBoE').update({
-        //     total: 500
-        // })
-        // .then(resp =>console.log(resp) )  
-        //console.log(orden)
+       
     }
 
     function handleOnChange(e) {
@@ -126,11 +116,7 @@ const CartForm = () => {
                                     name='email' 
                                     value={formData.email}    
                                 />  
-                                <input 
-                                    type='text' 
-                                    placeholder='Confirme el mail ' 
-                                    name='email2' 
-                                />  
+                              
                                 <button>Terminar Compra</button>
                             </form>
                         </div>
