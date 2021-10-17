@@ -3,6 +3,8 @@ import { useCartContext } from "../cartContext/CartContext";
 import { getFirestore } from '../../services/getFirebase';
 import  firebase  from 'firebase'
 import 'firebase/firestore'
+import "./cartForm.css"
+
 
 
 
@@ -59,7 +61,7 @@ const CartForm = () => {
     
     console.log(formData)
     return (
-        <div>
+        <div className="formContainer">
             <center>
                
                         <div>
@@ -68,6 +70,7 @@ const CartForm = () => {
                             <form 
                                 onSubmit={handleOnSubmit}
                                 onChange={handleOnChange}
+                                className="form"
                             >
                                 <input 
                                     type='text' 

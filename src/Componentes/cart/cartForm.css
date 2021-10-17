@@ -1,0 +1,9 @@
+.formContainer{
+    width: 86%;
+    margin: auto;
+    background-color: rgba(56, 53, 63, 0.431);
+
+}
+.form{
+    padding: 5%;
+}

@@ -42,7 +42,7 @@ export default function Cart() {
                     <h3>{item.data.name}</h3>
                   </div>
                   <div className="divArticle">
-                    <h4>{item.data.price}</h4>
+                    <h4>U$S {item.data.price}</h4>
                   </div>
 
                   <div className="divArticle">
@@ -58,40 +58,46 @@ export default function Cart() {
                 </div>
               ))}
             </div>
-            <div className='totalBorrar'>
-            <h2>Precio Total : U$S {totalPrice()}</h2>
-            <Button onClick={() => clearList()} variant="outlined">
-            <div className="borrarTodo">
-            <p style={{paddingRight:"10px"}}> BORRAR TODO</p>
-            <DeleteIcon>
-              <svg data-testid="DeleteIcon"
-              className='buttonClearAll'
-              
-              ></svg>
-            </DeleteIcon>
+            <div className="clean">
+            <button onClick={() => clearList()} variant="outlined"
+            style={{ width: "180px" }}
+            className="buttonClearAll">
+                <p > BORRAR TODO</p>
+                <DeleteIcon>
+                  <svg
+                    data-testid="DeleteIcon"
+                   
+                  ></svg>
+                </DeleteIcon>
+            </button>
             </div>
-          </Button>
+            <div className="totalPrice">
+              <h2>Precio Total : U$S {totalPrice()}</h2>
+            </div>
           </div>
-          </div>
-          <br /><br />
+          <br />
+          <br />
           <div className="pagarVolver">
             {" "}
             <NavLink exact to={"/"} className="adquirirOtro">
               <Button
                 variant="contained"
                 color="primary"
-                style={{ backgroundColor: "grey" }}
+               
               >
                 adquirir otra Obra de arte
               </Button>
             </NavLink>
-            <NavLink exact to={"/"} className="adquirirOtro">
-              <Button variant="contained" color="primary">
+            <NavLink exact to={"/"}
+             style={{textDecoration:"none"}}>
+              <Button variant="contained" color="primary"
+             >
                 Pagar
               </Button>
             </NavLink>
           </div>
-          <CartForm/>
+
+          <CartForm />
         </>
       )}
     </>
