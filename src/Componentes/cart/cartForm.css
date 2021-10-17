@@ -6,4 +6,51 @@
 }
 .form{
     padding: 5%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+.terminarCompra{
+   
+    background-color: gray;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 5px;
+
+}
+
+.terminarCompra :hover{
+    background-color: rgb(182, 176, 176);
+    z-index: 10;
+    transform: scale(1.01, 1.01);
+}
+
+
+@media only screen and (max-width: 850px){
+
+    .form{
+        padding: 5%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+        width: 180px;
+        height: 26px;
+        margin: 20px;
+        border-radius: 3px;
+        border: solid 2px rgb(53, 51, 51);
+    }
+    .terminarCompra{
+        margin: 20px;
+        width: 180px;
+        text-align: center;
+    }
+    
+}
+

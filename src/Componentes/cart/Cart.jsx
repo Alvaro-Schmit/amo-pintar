@@ -77,27 +77,7 @@ export default function Cart() {
           </div>
           <br />
           <br />
-          <div className="pagarVolver">
-            {" "}
-            <NavLink exact to={"/"} className="adquirirOtro">
-              <Button
-                variant="contained"
-                color="primary"
-               
-              >
-                adquirir otra Obra de arte
-              </Button>
-            </NavLink>
-            <NavLink exact to={"/"}
-             style={{textDecoration:"none"}}>
-              <Button variant="contained" color="primary"
-             >
-                Pagar
-              </Button>
-            </NavLink>
-          </div>
-
-          <CartForm />
+            <CartForm />
         </>
       )}
     </>

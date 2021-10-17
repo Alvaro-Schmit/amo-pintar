@@ -57,6 +57,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: flex-end;
+    transition: 900ms;
   
   
 }
@@ -70,6 +71,7 @@
     display: flex;
     background-color: gray;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 100;
+    border-radius: 5px;
 }
 
