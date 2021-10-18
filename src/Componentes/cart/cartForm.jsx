@@ -34,7 +34,7 @@ const CartForm = () => {
     const db = getFirestore();
     db.collection("orders")
       .add(orden)
-      .then((resp) => console.log(resp.id))
+      .then((resp) => alert('Compra exitosa, tu Identificador es ' +(resp.id)))
       .catch((err) => console.log(err))
       .finally(() =>
         setFormData({
@@ -81,7 +81,7 @@ const CartForm = () => {
               value={formData.email}
             />
 
-            <button className="terminarCompra">TERMINAR COMPRA</button>
+            <button className="terminarCompra">FINALIZAR COMPRA</button>
           </form>
         </div>
       </center>
