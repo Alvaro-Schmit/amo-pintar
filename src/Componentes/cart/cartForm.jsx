@@ -52,7 +52,6 @@ const CartForm = () => {
     });
   }
 
-  console.log(formData);
   return (
     <div className="formContainer">
       <center>

@@ -11,36 +11,20 @@ function ItemListContainer() {
   const { categoryId } = useParams();
 
   useEffect(() => {
-    if (categoryId) {
-      const dbquery = getFirestore();
+    const dbquery = getFirestore();
+    const dbQueryConditoional = categoryId
+      ? dbquery.collection("data").where("category", "==", categoryId).get()
+      : dbquery.collection("data").get();
 
-      dbquery
-        .collection("data")
-        .where("category", "==", categoryId)
-        .get()
+    dbQueryConditoional
 
-        .then((resp) => {
-          setData(
-            resp.docs.map((dataOne) => ({ id: dataOne.id, ...dataOne.data() }))
-          );
-        })
-        .catch((err) => console.log(err))
-        .finally(() => setloading(false));
-    } else {
-      const dbquery = getFirestore();
-
-      dbquery
-        .collection("data")
-        .get()
-
-        .then((resp) => {
-          setData(
-            resp.docs.map((dataOne) => ({ id: dataOne.id, ...dataOne.data() }))
-          );
-        })
-        .catch((err) => console.log(err))
-        .finally(() => setloading(false));
-    }
+      .then((resp) => {
+        setData(
+          resp.docs.map((dataOne) => ({ id: dataOne.id, ...dataOne.data() }))
+        );
+      })
+      .catch((err) => console.log(err))
+      .finally(() => setloading(false));
   }, [categoryId]);
 
   return (
