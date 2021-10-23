@@ -1,6 +1,9 @@
 Proyecto de e-commerce como galeria de Arte .
 
 Demo 
+https://hungry-lalande-c6c670.netlify.app/
+
+video
 https://drive.google.com/file/d/1s5SL7KOopFlHXsEwdQaJzyoGCCoW1nAU/view?usp=sharing
 
 Proyecto de e-comerce para la Entrega Final del Curso de Reac.js en Coder House
