@@ -1,5 +1,14 @@
 Proyecto de e-commerce como galeria de Arte .
 
+Demo 
+https://drive.google.com/file/d/1s5SL7KOopFlHXsEwdQaJzyoGCCoW1nAU/view?usp=sharing
+
+Proyecto de e-comerce para la Entrega Final del Curso de Reac.js en Coder House
+
+El proyecto exive una galeria de arte en linea.
+
+Se utiliza para este la libreria de Material ui y como base de datos se usa fireBase .
+
 
 
 
