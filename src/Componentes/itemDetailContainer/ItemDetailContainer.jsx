@@ -5,43 +5,41 @@ import Loader from "../loader/Loader";
 import { useParams } from "react-router";
 import { getFirestore } from "../../services/getFirebase";
 
-
 function ItemDetailContainer() {
   const [data, setData] = useState([]);
   const [loading, setloading] = useState(true);
   const { itemId } = useParams();
 
   useEffect(() => {
-    
-    if(itemId){
+    if (itemId) {
+      const dbqueryDetail = getFirestore();
 
-      const dbqueryDetail = getFirestore() 
+      dbqueryDetail
+        .collection("data")
+        .doc(itemId)
+        .get()
+        .then((resp) => {
+          setData({ id: resp.id, ...resp.data() });
+        })
 
-      dbqueryDetail.collection('data').doc(itemId).get()
-.then ((resp)=>{  
+        .catch((err) => console.log(err))
+        .finally(() => setloading(false));
+    } else {
+      const dbqueryDetail = getFirestore();
 
-  console.log(resp);
-          setData({id: resp.id, ...resp.data()});})
-
-          .catch(err => console.log(err))
-          .finally(()=>setloading(false))
-      
+      dbqueryDetail
+        .collection("data")
+        .doc(itemId)
+        .get()
+        .then((resp) => {
+          setData(
+            resp.docs.map((dataOne) => ({ id: dataOne.id, ...dataOne.data() }))
+          );
+        })
+        .catch((err) => console.log(err))
+        .finally(() => setloading(false));
     }
-    else{
-       const dbqueryDetail = getFirestore() 
-
-      dbqueryDetail.collection('data').doc(itemId).get()
-      .then(resp=>{
-        setData(resp.docs.map(dataOne => ({id: dataOne.id, ...dataOne.data()})))
-       
-        console.log(resp)})
-    .catch(err => console.log(err))
-    .finally(()=>setloading(false))
-
-
-    }
-  
-}  , [itemId]);
+  }, [itemId]);
 
   return (
     <div>
@@ -51,7 +49,6 @@ function ItemDetailContainer() {
         </div>
       ) : (
         <div>
-          
           <ItemDetail data={data} />
         </div>
       )}

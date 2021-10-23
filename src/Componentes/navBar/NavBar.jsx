@@ -9,8 +9,6 @@ import { useCartContext } from "../cartContext/CartContext";
 function NavBar({ titulo }) {
   const { iconCart } = useCartContext();
 
-  console.log(iconCart);
-
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
 

@@ -3,20 +3,15 @@ import { useState } from "react";
 import { Button } from "@material-ui/core";
 import "./itemCount.css";
 
-
-
 function ItemCount({ stock, initial, onAdd }) {
   const [count, setCount] = useState(initial);
 
-  
   const handleCount = (value) => {
-    
-    setCount(count + value)
-    console.log("item count",count)
+    setCount(count + value);
   };
 
   return (
-   <>
+    <>
       <div className="counterContainer">
         <div className="counter">
           <button

@@ -7,7 +7,7 @@ import CartForm from "./cartForm";
 
 export default function Cart() {
   const { cartList, deleteFromCart, totalPrice, clearList } = useCartContext();
-  console.log(cartList);
+
   return (
     <>
       {cartList.length === 0 ? (

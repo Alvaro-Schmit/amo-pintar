@@ -12,14 +12,13 @@ function ItemDetail({ data }) {
   const { addToCart } = useCartContext();
 
   const onAdd = (count) => {
-    console.log(`Agregaste ${count} produto al carrito`);
 
     addToCart(data, count );
     
     setCantidadSelect(cantidadSelect);
     setChangeButton(false);
   };
- console.log(data);
+
 
   return (
     <div className="bigcardContainer">
